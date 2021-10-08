@@ -1,9 +1,9 @@
+import getPlanetaryService from "./services/getPlanetary";
+
 function App() {
-  return (
-    <div className="App">
-      <h1>hola</h1>
-    </div>
-  );
+  getPlanetaryService(0);
+
+  return <div className="App">{/* <p>{$D}</p> */}</div>;
 }
 
 export default App;
