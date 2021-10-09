@@ -1,7 +1,10 @@
 // Dependencies
 import { useEffect } from "react";
 import useSWR from "swr";
+import { useHistory } from "react-router-dom";
+//hooks
 import usePlanetary from "../../hooks/usePlanetary";
+//componets
 import Planetary from "./Planetary";
 
 type Props = {
@@ -11,6 +14,7 @@ type Props = {
 export default function PlanetaryContainer({ url }: Props) {
   const { data, error } = useSWR(url);
   const { addPlanet } = usePlanetary();
+  let history = useHistory();
 
   useEffect(() => {
     data && addPlanet(data);
@@ -24,5 +28,18 @@ export default function PlanetaryContainer({ url }: Props) {
     return null;
   }
 
-  return <Planetary image={data.url} title={data.title} date={data.date} />;
+  const handleClick = () => {
+    const partsUrl: string[] = data.date.split("-");
+    const [year, month, day] = partsUrl;
+    history.push(`/${year}/${day}/${month}`);
+  };
+
+  return (
+    <Planetary
+      image={data.url}
+      title={data.title}
+      date={data.date}
+      handleClick={handleClick}
+    />
+  );
 }

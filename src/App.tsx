@@ -1,7 +1,3 @@
-//Dependencies
-import { SWRConfig } from "swr";
-import fetcher from "./services/fetcher";
-
 //Provider
 import { PlanetaryContextProvider } from "./providers/PlanetaryContext";
 
@@ -11,9 +7,7 @@ import RouterComponent from "./routes/RouterComponent";
 function App() {
   return (
     <PlanetaryContextProvider>
-      <SWRConfig value={{ fetcher, suspense: true }}>
-        <RouterComponent />
-      </SWRConfig>
+      <RouterComponent />
     </PlanetaryContextProvider>
   );
 }
