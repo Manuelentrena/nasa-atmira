@@ -1,4 +1,6 @@
+//Dependencies
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+//Pages
 import Home from "../views/Home";
 import PageError from "../views/PageError";
 import Detail from "../views/Detail";

@@ -12,13 +12,13 @@ type Props = {
 };
 
 export default function PlanetaryContainer({ url }: Props) {
+  let history = useHistory();
   const { data, error } = useSWR(url);
   const { addPlanet } = usePlanetary();
-  let history = useHistory();
 
   useEffect(() => {
     data && addPlanet(data);
-  }, [data]);
+  }, [data, addPlanet]);
 
   if (error || data.error) {
     return null;
