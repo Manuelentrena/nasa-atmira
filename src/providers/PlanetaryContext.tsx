@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import { useState, createContext } from "react";
+import { Planet, PlanetContextType, Props } from "./types";
 
-const PlanetaryContext = React.createContext({});
+const contextDefaultValues: PlanetContextType = {
+  listPlanet: [],
+  addPlanet: () => {},
+};
 
-type Props = { children: any };
+const PlanetaryContext = createContext<PlanetContextType>(contextDefaultValues);
 
 export function PlanetaryContextProvider({ children }: Props) {
-  const [listPlanet, setlistPlanet] = useState([]);
+  const [listPlanet, setlistPlanet] = useState<Planet[]>([]);
+  const addPlanet = (newPlanet: Planet) =>
+    setlistPlanet((prevPlanets) => [...prevPlanets, newPlanet]);
 
   return (
-    <PlanetaryContext.Provider value={{ listPlanet, setlistPlanet }}>
+    <PlanetaryContext.Provider value={{ listPlanet, addPlanet }}>
       {children}
     </PlanetaryContext.Provider>
   );
