@@ -1,11 +1,11 @@
-//Dependencies
+// Dependencies
 import React, { Suspense } from "react";
 import createListUrls from "../../../utils/createListUrls";
-//Components
+// Components
 import LoadingSkeleton from "../../common/Skeleton/LoadingSketeon";
-//LazyLoad
-const PlanetaryContainer = React.lazy(
-  () => import("../../common/Planetary/PlanetaryContainer")
+// LazyLoad
+const PlanetContainer = React.lazy(
+  () => import("../../common/Planet/PlanetContainer")
 );
 
 export default function PlanetaryList() {
@@ -13,7 +13,7 @@ export default function PlanetaryList() {
     <>
       {createListUrls().map((url: string) => (
         <Suspense fallback={<LoadingSkeleton />}>
-          <PlanetaryContainer key={url} url={url} />
+          <PlanetContainer key={url} url={url} />
         </Suspense>
       ))}
     </>

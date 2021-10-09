@@ -5,11 +5,11 @@ type Props = {
   handleClick: () => void;
 };
 
-export default function Planetary({ image, title, date, handleClick }: Props) {
+export default function Planet({ image, title, date, handleClick }: Props) {
   return (
     <div onClick={handleClick}>
       <h3>{title}</h3>
-      <img src={image} alt={title}></img>
+      <img loading="lazy" src={image} alt={title}></img>
       <small>{date}</small>
     </div>
   );

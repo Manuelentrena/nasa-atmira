@@ -1,5 +1,5 @@
 import { useState, createContext, useCallback } from "react";
-import { Planet, PlanetContextType, Props } from "./types";
+import { Planet, PlanetContextType, Props } from "../types/types";
 
 const contextDefaultValues: PlanetContextType = {
   listPlanet: [],
