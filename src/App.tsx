@@ -1,5 +1,8 @@
+//Dependencies
 import { SWRConfig } from "swr";
 import fetcher from "./services/fetcher";
+
+//Components
 import PlanetaryList from "./components/layouts/PlanetaryList/PlanetaryList";
 
 function App() {

@@ -1,9 +1,9 @@
-import Skeleton from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 export default function LoadingSkeleton() {
   return (
-    <div>
-      <Skeleton height={200} width={200} />
-    </div>
+    <SkeletonTheme color="#202020" highlightColor="#444">
+      <Skeleton height={200} width={200} delay={1} />
+    </SkeletonTheme>
   );
 }
