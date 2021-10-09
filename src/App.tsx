@@ -6,13 +6,13 @@ import fetcher from "./services/fetcher";
 import { PlanetaryContextProvider } from "./providers/PlanetaryContext";
 
 //Components
-import PlanetaryList from "./components/layouts/PlanetaryList/PlanetaryList";
+import RouterComponent from "./routes/RouterComponent";
 
 function App() {
   return (
     <PlanetaryContextProvider>
       <SWRConfig value={{ fetcher, suspense: true }}>
-        <PlanetaryList />
+        <RouterComponent />
       </SWRConfig>
     </PlanetaryContextProvider>
   );

@@ -1,26 +1,15 @@
-// Dependencies
-import useSWR from "swr";
-
 type Props = {
-  url: string;
+  image: string;
+  title: string;
+  date: string;
 };
 
-export default function Planetary({ url }: Props) {
-  const { data, error } = useSWR(url);
-
-  if (error || data.error) {
-    return <div />;
-  }
-
-  if (!data) {
-    return <div />;
-  }
-
-  console.log(data);
-
+export default function Planetary({ image, title, date }: Props) {
   return (
     <div>
-      <h1>{url}</h1>
+      <h3>{title}</h3>
+      <img src={image} alt={title}></img>
+      <small>{date}</small>
     </div>
   );
 }

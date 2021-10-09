@@ -1,7 +1,7 @@
 export type Props = { children: any };
 
 export type Planet = {
-  copyright: string;
+  copyright?: string;
   date: string;
   explanation: string;
   hdurl: string;

@@ -4,14 +4,16 @@ import createListUrls from "../../../utils/createListUrls";
 //Components
 import LoadingSkeleton from "../../common/Skeleton/LoadingSketeon";
 //LazyLoad
-const Planetary = React.lazy(() => import("../../common/Planetary/Planetary"));
+const PlanetaryContainer = React.lazy(
+  () => import("../../common/Planetary/PlanetaryContainer")
+);
 
 export default function PlanetaryList() {
   return (
     <>
       {createListUrls().map((url: string) => (
         <Suspense fallback={<LoadingSkeleton />}>
-          <Planetary key={url} url={url} />
+          <PlanetaryContainer key={url} url={url} />
         </Suspense>
       ))}
     </>
