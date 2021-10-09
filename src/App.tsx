@@ -1,9 +1,13 @@
-import getPlanetaryService from "./services/getPlanetary";
+import { SWRConfig } from "swr";
+import fetcher from "./services/fetcher";
+import PlanetaryList from "./components/layouts/PlanetaryList/PlanetaryList";
 
 function App() {
-  getPlanetaryService(0);
-
-  return <div className="App">{/* <p>{$D}</p> */}</div>;
+  return (
+    <SWRConfig value={{ fetcher, suspense: true }}>
+      <PlanetaryList />
+    </SWRConfig>
+  );
 }
 
 export default App;
