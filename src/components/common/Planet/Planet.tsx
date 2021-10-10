@@ -8,7 +8,7 @@ type Props = {
 
 export default function Planet({ url, title, date, handleClick, type }: Props) {
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="planet">
       <h2>{title}</h2>
       {type === "image" && (
         <img className="planet__image" loading="lazy" src={url} alt={title} />
