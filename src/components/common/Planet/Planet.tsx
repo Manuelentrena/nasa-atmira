@@ -12,7 +12,9 @@ export default function Planet({ url, title, date, handleClick, type }: Props) {
       <h3>{title}</h3>
       {type === "image" && <img loading="lazy" src={url} alt={title} />}
       {type === "video" && (
-        <iframe title={title} width="1000" height="570" src={url} />
+        <div className="planet__iframeBox">
+          <iframe className="planet__iframe" title={title} src={url} />
+        </div>
       )}
       <small>{date}</small>
     </div>
