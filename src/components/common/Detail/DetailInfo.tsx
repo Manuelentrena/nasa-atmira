@@ -36,14 +36,15 @@ export default function DetailInfo({
       )}
       <p className="detail__descTitle">Description:</p>
       <p className="detail__desc">{desc}</p>
-      <div className="detail__copyContainer">
-        <p className="detail__copyTitle">Author:{"\u00A0"}</p>
-        <p className="detail__copy">{copy ? copy : " None"}</p>
+
+      <div className="detail__Container">
+        <p className="detail__infoTitle">▪ Author:{"\u00A0"}</p>
+        <p className="detail__info">{copy ? copy : " None"}</p>
       </div>
 
-      <div className="detail__dateContainer">
-        <small className="detail__dateTitle">Date:{"\u00A0"}</small>
-        <small className="detail__date">{date}</small>
+      <div className="detail__Container">
+        <p className="detail__infoTitle">▪ Date:{"\u00A0"}</p>
+        <p className="detail__info">{date}</p>
       </div>
     </div>
   );
