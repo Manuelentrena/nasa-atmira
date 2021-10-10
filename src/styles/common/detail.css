@@ -1,0 +1,57 @@
+.detail {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.detail__title {
+  font-size: 2.5rem;
+}
+
+.detail__image {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.detail__iframeBox {
+}
+
+.detail__iframe {
+}
+.detail__descTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0rem;
+}
+
+.detail__desc {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.detail__copyContainer {
+  font-size: 1.4rem;
+  display: flex;
+}
+
+.detail__copyTitle {
+  font-weight: 900;
+}
+
+.detail__dateContainer {
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+}
+
+.detail__dateTitle {
+  font-weight: 900;
+}
+
+.detail__date {
+  font-size: 1rem;
+}
+
+.backHome {
+  margin: 0 auto;
+}

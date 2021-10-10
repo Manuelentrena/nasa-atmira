@@ -5,13 +5,13 @@ import { infoPlanet } from "../../../types/types";
 import usePlanet from "../../hooks/usePlanet";
 // Components
 import Planet from "./Planet";
-import LoadingSkeleton from "../Skeleton/LoadingSketeon";
+import LoadingPlanet from "../Skeleton/LoadingPlanet";
 
 export default function PlanetContainer({ url }: { url: string }) {
   let history = useHistory();
   const { data, isLoading, isError }: infoPlanet = usePlanet(url);
 
-  if (isLoading) return <LoadingSkeleton />;
+  if (isLoading) return <LoadingPlanet />;
   if (isError) return <p>Error</p>;
 
   const handleClick = () => {

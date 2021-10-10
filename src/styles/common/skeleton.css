@@ -1,3 +1,8 @@
 .skeleton {
   margin-bottom: 5px;
 }
+
+.loadingPlanet {
+  display: flex;
+  flex-direction: column;
+}
