@@ -1,4 +1,9 @@
 @import "./common/planet.css";
 @import "./common/detail.css";
 @import "./common/skeleton.css";
+@import "./common/footer.css";
 @import "./layouts/planetList.css";
+
+body {
+  margin: 0;
+}

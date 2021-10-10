@@ -4,6 +4,7 @@ import fetcher from "../services/fetcher";
 
 //Components
 import PlanetList from "../components/layouts/PlanetList/PlanetList";
+import Footer from "../components/common/Footer/Footer";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <SWRConfig value={{ fetcher, suspense: true }}>
         <PlanetList />
       </SWRConfig>
-      <h2>Footer</h2>
+      <Footer />
     </>
   );
 }

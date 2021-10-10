@@ -1,6 +1,7 @@
 .detail {
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 500px;
+  overflow: hidden;
 }
 
 .detail__title {
@@ -64,9 +65,10 @@
 
 @media (max-width: 768px) {
   .detail {
-    width: 300px;
+    width: 95%;
+    overflow: hidden;
   }
   .detail__image {
-    width: 300px;
+    width: 95%;
   }
 }
