@@ -14,10 +14,6 @@ export default function usePlanet(url: string | null = null) {
     data && !exitPlanet(data, listPlanet) && addPlanet(data);
   }, [data, addPlanet, listPlanet]);
 
-  useEffect(() => {
-    console.log(url);
-  }, [url]);
-
   return {
     data,
     isLoading: !error && !data,
