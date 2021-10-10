@@ -1,7 +1,12 @@
+// Components
+import PlanetDetail from "../components/layouts/PlanetDetail/PlanetDetail";
+
 export default function Detail() {
   return (
-    <div>
-      <h1>Detalle</h1>
-    </div>
+    <>
+      <h1>Header</h1>
+      <PlanetDetail />
+      <h2>Footer</h2>
+    </>
   );
 }

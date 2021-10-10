@@ -3,19 +3,26 @@ import { useContext, useEffect } from "react";
 import useSWR from "swr";
 // Context
 import PlanetaryContext from "../../providers/PlanetaryContext";
+// Utils
+import { exitPlanet } from "../../utils/existPlanet";
 
-export default function usePlanet(url: string) {
-  const { addPlanet } = useContext(PlanetaryContext);
+export default function usePlanet(url: string | null = null) {
+  const { addPlanet, listPlanet } = useContext(PlanetaryContext);
   const { data, error } = useSWR(url);
 
   useEffect(() => {
-    data && addPlanet(data);
-  }, [data, addPlanet]);
+    data && !exitPlanet(data, listPlanet) && addPlanet(data);
+  }, [data, addPlanet, listPlanet]);
+
+  function getDetail(pathname: string): void {
+    console.log(pathname);
+  }
 
   return {
     data,
     isLoading: !error && !data,
     isError: error,
     addPlanet,
+    getDetail,
   };
 }
