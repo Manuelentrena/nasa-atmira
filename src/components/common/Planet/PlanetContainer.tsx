@@ -22,9 +22,10 @@ export default function PlanetContainer({ url }: { url: string }) {
 
   return (
     <Planetary
-      image={data.url}
+      url={data.url}
       title={data.title}
       date={data.date}
+      type={data.media_type}
       handleClick={handleClick}
     />
   );

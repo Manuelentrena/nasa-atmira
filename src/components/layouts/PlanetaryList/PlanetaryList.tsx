@@ -1,10 +1,10 @@
 // Dependencies
-import React, { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import createListUrls from "../../../utils/createListUrls";
 // Components
 import LoadingSkeleton from "../../common/Skeleton/LoadingSketeon";
 // LazyLoad
-const PlanetContainer = React.lazy(
+const PlanetContainer = lazy(
   () => import("../../common/Planet/PlanetContainer")
 );
 
