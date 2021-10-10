@@ -1,18 +1,19 @@
-import { useEffect } from "react";
-import usePlanet from "../../hooks/usePlanet";
+// Dependencies
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
+// Utils
+import createDate from "../../../utils/createDate";
+import createUrl from "../../../utils/createUrl";
+// Components
+import DetailInfoContainer from "../../common/Detail/DetailInfoContainer";
 
 export default function PlanetDetail() {
+  const [url, setUrl] = useState<string | null>(null);
   const { pathname } = useLocation();
-  const { getDetail } = usePlanet();
 
   useEffect(() => {
-    pathname && getDetail(pathname);
-  }, [getDetail, pathname]);
+    setUrl(createUrl(createDate(pathname)));
+  }, [pathname]);
 
-  return (
-    <div>
-      <h1>container</h1>
-    </div>
-  );
+  return <div>{url && <DetailInfoContainer url={url} />}</div>;
 }

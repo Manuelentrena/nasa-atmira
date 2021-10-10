@@ -4,7 +4,7 @@ import { infoPlanet } from "../../../types/types";
 // Hooks
 import usePlanet from "../../hooks/usePlanet";
 // Components
-import Planetary from "./Planet";
+import Planet from "./Planet";
 import LoadingSkeleton from "../Skeleton/LoadingSketeon";
 
 export default function PlanetContainer({ url }: { url: string }) {
@@ -21,7 +21,7 @@ export default function PlanetContainer({ url }: { url: string }) {
   };
 
   return (
-    <Planetary
+    <Planet
       url={data.url}
       title={data.title}
       date={data.date}

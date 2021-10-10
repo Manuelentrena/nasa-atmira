@@ -14,15 +14,14 @@ export default function usePlanet(url: string | null = null) {
     data && !exitPlanet(data, listPlanet) && addPlanet(data);
   }, [data, addPlanet, listPlanet]);
 
-  function getDetail(pathname: string): void {
-    console.log(pathname);
-  }
+  useEffect(() => {
+    console.log(url);
+  }, [url]);
 
   return {
     data,
     isLoading: !error && !data,
     isError: error,
     addPlanet,
-    getDetail,
   };
 }
