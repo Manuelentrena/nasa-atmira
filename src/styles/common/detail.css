@@ -68,7 +68,23 @@
     width: 95%;
     overflow: hidden;
   }
+
   .detail__image {
-    width: 95%;
+    width: 100%;
+  }
+
+  .detail__title {
+    font-size: 1.8rem;
+  }
+
+  .detail__descTitle {
+    font-size: 1.8rem;
+  }
+
+  .detail__desc {
+    font-size: 1.2rem;
+  }
+  .detail__Container {
+    font-size: 1.2rem;
   }
 }

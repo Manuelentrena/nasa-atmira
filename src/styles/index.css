@@ -2,8 +2,10 @@
 @import "./common/detail.css";
 @import "./common/skeleton.css";
 @import "./common/footer.css";
+@import "./common/header.css";
 @import "./layouts/planetList.css";
 
 body {
   margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
