@@ -3,6 +3,7 @@
 @import "./common/skeleton.css";
 @import "./common/footer.css";
 @import "./common/header.css";
+@import "./common/search.css";
 @import "./layouts/planetList.css";
 
 body {

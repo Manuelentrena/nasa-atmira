@@ -19,10 +19,17 @@ export default function Search() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label></label>
-      <input type="date" name="date" onChange={handleChange}></input>
-      <button type="submit">SEARCH</button>
+    <form className="search" onSubmit={handleSubmit}>
+      <input
+        className="search__input"
+        type="date"
+        name="date"
+        required
+        onChange={handleChange}
+      ></input>
+      <button className="search__button" type="submit">
+        SEARCH
+      </button>
     </form>
   );
 }

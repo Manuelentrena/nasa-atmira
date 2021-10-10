@@ -1,0 +1,17 @@
+.search {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+.search__input {
+  font-size: 1.6rem;
+}
+.search__button {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
