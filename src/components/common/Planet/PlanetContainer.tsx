@@ -1,21 +1,18 @@
 // Dependencies
 import { useHistory } from "react-router-dom";
+import { infoPlanet } from "../../../types/types";
 // Hooks
 import usePlanet from "../../hooks/usePlanet";
-// Componets
+// Components
 import Planetary from "./Planet";
 import LoadingSkeleton from "../Skeleton/LoadingSketeon";
 
-type Props = {
-  url: string;
-};
-
-export default function PlanetContainer({ url }: Props) {
+export default function PlanetContainer({ url }: { url: string }) {
   let history = useHistory();
-  const { data, isLoading, isError } = usePlanet(url);
+  const { data, isLoading, isError }: infoPlanet = usePlanet(url);
 
   if (isLoading) return <LoadingSkeleton />;
-  if (isError) return <h1>Error</h1>;
+  if (isError) return <p>Error</p>;
 
   const handleClick = () => {
     const partsUrl: string[] = data.date.split("-");

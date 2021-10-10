@@ -1,4 +1,6 @@
-export type Props = { children: any };
+import { ReactNode } from "react";
+
+export type Props = { children: ReactNode };
 
 export type Planet = {
   copyright?: string;
@@ -15,3 +17,5 @@ export type PlanetContextType = {
   listPlanet: Planet[];
   addPlanet: (Planet: Planet) => void;
 };
+
+export type infoPlanet = { data: Planet; isLoading: boolean; isError: boolean };
