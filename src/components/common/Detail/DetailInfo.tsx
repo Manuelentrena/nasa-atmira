@@ -35,7 +35,7 @@ export default function DetailInfo({
         </div>
       )}
       <p className="detail__descTitle">Description:</p>
-      <p className="detail__desc">{desc}</p>
+      <p className="detail__desc">{desc ? desc : " None"}</p>
 
       <div className="detail__Container">
         <p className="detail__infoTitle">▪ Author:{"\u00A0"}</p>
@@ -44,7 +44,7 @@ export default function DetailInfo({
 
       <div className="detail__Container">
         <p className="detail__infoTitle">▪ Date:{"\u00A0"}</p>
-        <p className="detail__info">{date}</p>
+        <p className="detail__info">{date ? date : " None"}</p>
       </div>
     </div>
   );

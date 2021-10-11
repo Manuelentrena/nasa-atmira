@@ -47,16 +47,22 @@
 .detail__Container {
   font-size: 1.4rem;
   display: flex;
-  margin: 0rem;
+  justify-content: start;
 }
 
 .detail__infoTitle {
+  display: flex;
+  flex-direction: row;
   font-weight: 900;
   margin: 0rem;
+  min-width: 100px;
 }
 
 .detail__info {
   margin: 0rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .backHome {
