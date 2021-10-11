@@ -1,5 +1,5 @@
 // Dependencies
-import { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router";
 // Utils
 import createPath from "../../../utils/createPath";
@@ -7,6 +7,11 @@ import createPath from "../../../utils/createPath";
 export default function Search() {
   const [date, setDate] = useState<string>("");
   let history = useHistory();
+  const inputDateRef: any = useRef(null);
+
+  useEffect(() => {
+    inputDateRef.current.max = new Date().toISOString().split("T")[0];
+  }, []);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -21,6 +26,7 @@ export default function Search() {
   return (
     <form className="search" onSubmit={handleSubmit}>
       <input
+        ref={inputDateRef}
         className="search__input"
         type="date"
         name="date"
