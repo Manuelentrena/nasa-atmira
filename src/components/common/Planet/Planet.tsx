@@ -18,7 +18,7 @@ export default function Planet({ url, title, date, handleClick, type }: Props) {
           <iframe className="planet__iframe" title={title} src={url} />
         </div>
       )}
-      <small className="planet__date">{date}</small>
+      <small className="planet__date">Date: {date}</small>
     </div>
   );
 }
