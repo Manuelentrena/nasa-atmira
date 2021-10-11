@@ -60,7 +60,17 @@
 }
 
 .backHome {
-  margin: 0 auto;
+  font-size: 1.5rem;
+  background-color: cornflowerblue;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+  color: white;
+}
+
+.backHome:hover {
+  color: black;
 }
 
 @media (max-width: 768px) {

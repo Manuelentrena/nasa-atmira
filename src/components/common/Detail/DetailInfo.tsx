@@ -23,7 +23,7 @@ export default function DetailInfo({
   return (
     <div className="detail">
       <Link to="/" className="backHome">
-        "🌎 DASHBOARD"
+        {"<"} HOME 🌎
       </Link>
       <h1 className="detail__title">{`🌌 ${title}`}</h1>
       {type === "image" && (
