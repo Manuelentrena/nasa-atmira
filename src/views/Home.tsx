@@ -11,11 +11,13 @@ import Search from "../components/common/Search/Search";
 export default function Home() {
   return (
     <>
-      <Header />
-      <Search />
-      <SWRConfig value={{ fetcher, suspense: true }}>
-        <PlanetList />
-      </SWRConfig>
+      <div>
+        <Header />
+        <Search />
+        <SWRConfig value={{ fetcher, suspense: true }}>
+          <PlanetList />
+        </SWRConfig>
+      </div>
       <Footer />
     </>
   );

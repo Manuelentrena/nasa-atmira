@@ -10,10 +10,12 @@ import Header from "../components/common/Header/Header";
 export default function Detail() {
   return (
     <>
-      <Header />
-      <SWRConfig value={{ fetcher }}>
-        <PlanetDetail />
-      </SWRConfig>
+      <div>
+        <Header />
+        <SWRConfig value={{ fetcher }}>
+          <PlanetDetail />
+        </SWRConfig>
+      </div>
       <Footer />
     </>
   );
